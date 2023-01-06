@@ -1,39 +1,109 @@
-# pxt-manykit-ir-receiver
+# ManyKit IR Receiver
 
-#### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+## ManyKit Board
 
-#### 软件架构
-软件架构说明
+The ManyKit connects to the BBC micro:bit to provide easy connections to a wide variety of sensors, actuators and other components.
 
+http://manykit.com/
 
-#### 安装教程
+# Documentation
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## manykit.connectIrReceiver
 
-#### 使用说明
+Connects to the IR receiver module at the specified pin and configures the IR protocol.
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+```sig
+manykit.connectIrReceiver(DigitalPin.P0, IrProtocol.Keyestudio)
+```
 
-#### 参与贡献
+### Parameters
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+- `pin` - digital pin with an attached IR receiver
+- `protocol` - the IR protocol to be detected, for example IrProtocol.Keyestudio or IrProtocol.NEC
 
+## manykit.onIrButton
 
-#### 特技
+Do something when a specific button is pressed or released on the remote control.
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+```sig
+manykit.onIrButton(IrButton.Ok, IrButtonAction.Pressed, () => {})
+```
+
+### Parameters
+
+- `button` - the button to be checked
+- `action`- the trigger action
+- `handler` - body code to run when the event is raised
+
+## manykit.irButton
+
+Returns the code of the IR button that was pressed last. Returns -1 (IrButton.Any) if no button has been pressed yet.
+
+```sig
+manykit.irButton()
+```
+
+## manykit.onIrDatagram
+
+Do something when a specific button is pressed or released on the remote control.
+
+```sig
+manykit.onIrDatagram(() => {})
+```
+
+### Parameters
+
+- `handler` - body code to run when the event is raised
+
+## manykit.irDatagram
+
+Returns the IR datagram as 32-bit hexadecimal string. The last received datagram is returned or "0x00000000" if no data has been received yet.
+
+```sig
+manykit.irDatagram()
+```
+
+## manykit.wasIrDataReceived
+
+Returns true if any IR data was received since the last call of this function. False otherwise.
+
+```sig
+manykit.wasIrDataReceived();
+```
+
+## manykit.irButtonCode
+
+Returns the command code of a specific IR button.
+
+```sig
+manykit.irButtonCode(IrButton.Number_9)
+```
+
+### Parameters
+
+- `button` - the button
+
+## MakeCode Example
+
+```blocks
+manykit.connectIrReceiver(DigitalPin.P0, IrProtocol.Keyestudio)
+
+manykit.onIrButton(IrButton.Ok, IrButtonAction.Released, function () {
+    basic.showIcon(IconNames.SmallHeart)
+})
+
+manykit.onIrButton(IrButton.Ok, IrButtonAction.Pressed, function () {
+    basic.showIcon(IconNames.Heart)
+})
+
+basic.forever(function () {
+    if (manykit.wasAnyIrButtonPressed()) {
+        basic.showNumber(manykit.irButton())
+    }
+})
+
+```
+
+## License
+
+Licensed under the MIT License (MIT). See LICENSE file for more details.

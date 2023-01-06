@@ -1,0 +1,19 @@
+{
+    "name": "ManyKit-IR-Receiver",
+    "version": "1.0.0",
+    "description": "MakeCode extension for Infrared Module Kit",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",
+        "background": ""
+    },
+    "files": [
+        "README.md",
+        "infrared-receiver.ts",
+        "_locales/de/ManyKit-IR-Receiver-strings.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true
+}
