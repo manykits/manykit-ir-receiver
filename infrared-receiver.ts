@@ -16,8 +16,8 @@ const enum IrButton {
   Return = 0xC2,
   //% block="<"
   Back = 0xE0,
-  //% block="Pause"
-  Pause = 0xA8,
+  //% block="Play"
+  Play = 0xA8,
   //% block=">"
   Forward = 0x90,
   //% block="0"

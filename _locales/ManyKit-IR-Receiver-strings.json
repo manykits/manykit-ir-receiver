@@ -6,7 +6,7 @@
   "IrButton.Add|block": "+",
   "IrButton.Return|block": "Return",
   "IrButton.Back|block": "<",
-  "IrButton.Pause|block": "Pause",
+  "IrButton.Play|block": "Play",
   "IrButton.Forward|block": ">",
   "IrButton.Number_0|block": "0",  
   "IrButton.Minus|block": "-",

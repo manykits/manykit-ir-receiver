@@ -6,7 +6,7 @@
   "IrButton.Add|block": "+",
   "IrButton.Return|block": "返回",
   "IrButton.Back|block": "<",
-  "IrButton.Pause|block": "暂停",
+  "IrButton.Play|block": "播放",
   "IrButton.Forward|block": ">",
   "IrButton.Number_0|block": "0",  
   "IrButton.Minus|block": "-",
