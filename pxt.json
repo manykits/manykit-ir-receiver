@@ -10,7 +10,9 @@
     "files": [
         "README.md",
         "infrared-receiver.ts",
-        "_locales/zh-cn/ManyKit-IR-Receiver-strings.json"
+        "_locales/ManyKit-IR-Receiver-strings.json",
+        "_locales/zh-cn/ManyKit-IR-Receiver-strings.json",
+        "_locales/zh-tw/ManyKit-IR-Receiver-strings.json"
     ],
     "testFiles": [
         "test.ts"
