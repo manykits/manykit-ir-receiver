@@ -5,7 +5,7 @@
     "license": "MIT",
     "dependencies": {
         "core": "*",
-        "background": "github:manykits/pxt-manykit-base#v1.0.0"
+        "base": "github:manykits/pxt-manykit-base#v1.0.0"
     },
     "files": [
         "README.md",

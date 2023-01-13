@@ -181,7 +181,7 @@ namespace manykit {
       irState.hasNewDatagram = true;
 
       if (irState.onIrDatagram) {
-        background.schedule(irState.onIrDatagram, background.Thread.UserCallback, background.Mode.Once, 0);
+        base.schedule(irState.onIrDatagram, base.Thread.UserCallback, base.Mode.Once, 0);
       }
 
       const newCommand = irState.commandSectionBits >> 8;
@@ -192,13 +192,13 @@ namespace manykit {
         if (irState.activeCommand >= 0) {
           const releasedHandler = irState.onIrButtonReleased.find(h => h.irButton === irState.activeCommand || IrButton.Any === h.irButton);
           if (releasedHandler) {
-            background.schedule(releasedHandler.onEvent, background.Thread.UserCallback, background.Mode.Once, 0);
+            base.schedule(releasedHandler.onEvent, base.Thread.UserCallback, base.Mode.Once, 0);
           }
         }
 
         const pressedHandler = irState.onIrButtonPressed.find(h => h.irButton === newCommand || IrButton.Any === h.irButton);
         if (pressedHandler) {
-          background.schedule(pressedHandler.onEvent, background.Thread.UserCallback, background.Mode.Once, 0);
+          base.schedule(pressedHandler.onEvent, base.Thread.UserCallback, base.Mode.Once, 0);
         }
 
         irState.activeCommand = newCommand;
@@ -253,7 +253,7 @@ namespace manykit {
 
     enableIrMarkSpaceDetection(pin);
 
-    background.schedule(notifyIrEvents, background.Thread.Priority, background.Mode.Repeat, REPEAT_TIMEOUT_MS);
+    base.schedule(notifyIrEvents, base.Thread.Priority, base.Mode.Repeat, REPEAT_TIMEOUT_MS);
   }
 
   function notifyIrEvents() {
@@ -266,7 +266,7 @@ namespace manykit {
 
         const handler = irState.onIrButtonReleased.find(h => h.irButton === irState.activeCommand || IrButton.Any === h.irButton);
         if (handler) {
-          background.schedule(handler.onEvent, background.Thread.UserCallback, background.Mode.Once, 0);
+          base.schedule(handler.onEvent, base.Thread.UserCallback, base.Mode.Once, 0);
         }
 
         irState.bitsReceived = 0;
@@ -310,7 +310,7 @@ namespace manykit {
   //% block="IR button"
   //% weight=70
   export function irButton(): number {
-    basic.pause(0); // Yield to support background processing when called in tight loops
+    basic.pause(0); // Yield to support base processing when called in tight loops
     if (!irState) {
       return IrButton.Any;
     }
@@ -339,7 +339,7 @@ namespace manykit {
   //% block="IR datagram"
   //% weight=30
   export function irDatagram(): string {
-    basic.pause(0); // Yield to support background processing when called in tight loops
+    basic.pause(0); // Yield to support base processing when called in tight loops
     initIrState();
     return (
       "0x" +
@@ -356,7 +356,7 @@ namespace manykit {
   //% block="IR data was received"
   //% weight=80
   export function wasIrDataReceived(): boolean {
-    basic.pause(0); // Yield to support background processing when called in tight loops
+    basic.pause(0); // Yield to support base processing when called in tight loops
     initIrState();
     if (irState.hasNewDatagram) {
       irState.hasNewDatagram = false;
@@ -378,7 +378,7 @@ namespace manykit {
   //% block="IR button code %button"
   //% weight=60
   export function irButtonCode(button: IrButton): number {
-    basic.pause(0); // Yield to support background processing when called in tight loops
+    basic.pause(0); // Yield to support base processing when called in tight loops
     return button as number;
   }
 
