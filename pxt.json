@@ -1,11 +1,11 @@
 {
     "name": "ManyKit-IR-Receiver",
     "version": "1.0.0",
-    "description": "MakeCode extension for Infrared Module Kit",
+    "description": "MakeCode extension for manykit Infrared Module Kit",
     "license": "MIT",
     "dependencies": {
         "core": "*",
-        "background": ""
+        "background": "github:1010Technologies/pxt-makerbit-background#v1.0.1"
     },
     "files": [
         "README.md",
