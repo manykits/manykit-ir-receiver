@@ -44,6 +44,12 @@ const enum IrButton {
   Number_8 = 0x00FF4AB5,
   //% block="9"
   Number_9 = 0x00FF52AD,
+  //% block="Any"
+  Any = -1,
+  //% block="Any1"
+  Any1 = -1,
+    //% block="Any2"
+  Any2 = -1,
 }
 
 const enum IrButtonAction {
