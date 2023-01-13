@@ -3,7 +3,7 @@
  */
 
 manykit.connectIrReceiver(DigitalPin.P0, IrProtocol.NEC);
-manykit.onIrButton(IrButton.Ok, IrButtonAction.Pressed, () => {});
+manykit.onIrButton(IrButton.OK, IrButtonAction.Pressed, () => {});
 manykit.onIrButton(IrButton.Up, IrButtonAction.Released, () => {});
 manykit.onIrDatagram(() => {});
 const received: boolean = manykit.wasIrDataReceived();

@@ -2,48 +2,52 @@
 // (receiver module+remote controller)
 
 const enum IrButton {
-  //% block="any"
-  Any = -1,
-  //% block="▲"
-  Up = 0x62,
-  //% block=" "
-  Unused_2 = -2,
+  //% block="Close"
+  Close = 0x00FFA25D,
+  //% block="Menu"
+  Menu = 0x00FFA25D,
+  //% block="Sound"
+  Sound = 0x00FFE21D,
+
+  //% block="Mode"
+  Mode = 0x00FF22DD,
+  //% block="+"
+  Up = 0x00FF02FD,
+  //% block="Return"
+  Return = 0x00FF02FD,
+
   //% block="◀"
-  Left = 0x22,
-  //% block="OK"
-  Ok = 0x02,
+  Left = 0x00FF02FD,
+  //% block="Pause"
+  Pause = 0x00FF02FD,
   //% block="▶"
-  Right = 0xc2,
-  //% block=" "
-  Unused_3 = -3,
-  //% block="▼"
-  Down = 0xa8,
-  //% block=" "
-  Unused_4 = -4,
-  //% block="1"
-  Number_1 = 0x68,
-  //% block="2"
-  Number_2 = 0x98,
-  //% block="3"
-  Number_3 = 0xb0,
-  //% block="4"
-  Number_4 = 0x30,
-  //% block="5"
-  Number_5 = 0x18,
-  //% block="6"
-  Number_6 = 0x7a,
-  //% block="7"
-  Number_7 = 0x10,
-  //% block="8"
-  Number_8 = 0x38,
-  //% block="9"
-  Number_9 = 0x5a,
-  //% block="*"
-  Star = 0x42,
+  Right = 0x00FF02FD,
+
   //% block="0"
-  Number_0 = 0x4a,
-  //% block="#"
-  Hash = 0x52,
+  Number_0 = 0x00FF6897,
+  //% block="-"
+  Down = 0x00FF9867,
+  //% block="OK"
+  OK = 0x00FFB04F,
+
+  //% block="1"
+  Number_1 = 0x00FF30CF,
+  //% block="2"
+  Number_2 = 0x00FF18E7,
+  //% block="3"
+  Number_3 = 0x00FF7A85,
+  //% block="4"
+  Number_4 = 0x00FF10EF,
+  //% block="5"
+  Number_5 = 0x00FF38C7,
+  //% block="6"
+  Number_6 = 0x00FF5AA5,
+  //% block="7"
+  Number_7 = 0x00FF42BD,
+  //% block="8"
+  Number_8 = 0x00FF4AB5,
+  //% block="9"
+  Number_9 = 0x00FF52AD,
 }
 
 const enum IrButtonAction {

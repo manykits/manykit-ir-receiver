@@ -26,7 +26,7 @@ manykit.connectIrReceiver(DigitalPin.P0, IrProtocol.Keyestudio)
 Do something when a specific button is pressed or released on the remote control.
 
 ```sig
-manykit.onIrButton(IrButton.Ok, IrButtonAction.Pressed, () => {})
+manykit.onIrButton(IrButton.OK, IrButtonAction.Pressed, () => {})
 ```
 
 ### Parameters
@@ -88,11 +88,11 @@ manykit.irButtonCode(IrButton.Number_9)
 ```blocks
 manykit.connectIrReceiver(DigitalPin.P0, IrProtocol.Keyestudio)
 
-manykit.onIrButton(IrButton.Ok, IrButtonAction.Released, function () {
+manykit.onIrButton(IrButton.OK, IrButtonAction.Released, function () {
     basic.showIcon(IconNames.SmallHeart)
 })
 
-manykit.onIrButton(IrButton.Ok, IrButtonAction.Pressed, function () {
+manykit.onIrButton(IrButton.OK, IrButtonAction.Pressed, function () {
     basic.showIcon(IconNames.Heart)
 })
 
