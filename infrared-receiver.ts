@@ -3,17 +3,17 @@
 
 const enum IrButton {
   //% block="Close"
-  Close = 0x00FFA25D,
+  Close = 0xA2,
   //% block="Menu"
-  Menu = 0x00FFA25D,
+  Menu = 0x62,
   //% block="Sound"
-  Sound = 0x00FFE21D,
+  Sound = 0xE2,
   //% block="Mode"
-  Mode = 0x00FF22DD,
+  Mode = 0x22,
   //% block="+"
-  Add = 0x00FF02FD,
+  Add = 0x02,
   //% block="Return"
-  Return = 0x00FF02FD,
+  Return = 0xC2,
   //% block="<"
   Back = 0x00FF02FD,
   //% block="Pause"
