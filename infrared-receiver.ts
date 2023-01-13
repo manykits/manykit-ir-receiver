@@ -8,28 +8,24 @@ const enum IrButton {
   Menu = 0x00FFA25D,
   //% block="Sound"
   Sound = 0x00FFE21D,
-
   //% block="Mode"
   Mode = 0x00FF22DD,
   //% block="+"
   Up = 0x00FF02FD,
   //% block="Return"
   Return = 0x00FF02FD,
-
   //% block="◀"
   Left = 0x00FF02FD,
   //% block="Pause"
   Pause = 0x00FF02FD,
   //% block="▶"
   Right = 0x00FF02FD,
-
   //% block="0"
   Number_0 = 0x00FF6897,
   //% block="-"
   Down = 0x00FF9867,
   //% block="OK"
   OK = 0x00FFB04F,
-
   //% block="1"
   Number_1 = 0x00FF30CF,
   //% block="2"
