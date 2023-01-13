@@ -1,8 +1,8 @@
 {
   "IrButton.Close|block": "关闭",
-  "IrButton.Menu|block": "MENU",
+  "IrButton.Menu|block": "Menu",
   "IrButton.Sound|block": "声音",
-  "IrButton.Mode|block": "MODE",
+  "IrButton.Mode|block": "Mode",
   "IrButton.Add|block": "+",
   "IrButton.Return|block": "返回",
   "IrButton.Back|block": "◀",
