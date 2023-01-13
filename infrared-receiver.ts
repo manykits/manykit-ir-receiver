@@ -5,7 +5,7 @@ const enum IrButton {
   //% block="Close"
   Close = 0xA2,
   //% block="Menu"
-  Menu = 0x62,
+  Menu = 16753245,
   //% block="Sound"
   Sound = 0xE2,
   //% block="Mode"
