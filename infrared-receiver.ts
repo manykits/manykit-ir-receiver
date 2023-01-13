@@ -14,11 +14,11 @@ const enum IrButton {
   Add = 0x00FF02FD,
   //% block="Return"
   Return = 0x00FF02FD,
-  //% block="◀"
+  //% block="<"
   Back = 0x00FF02FD,
   //% block="Pause"
   Pause = 0x00FF02FD,
-  //% block="▶"
+  //% block=">"
   Forward = 0x00FF02FD,
   //% block="0"
   Number_0 = 0x00FF6897,
@@ -48,7 +48,7 @@ const enum IrButton {
   Any = -1,
   //% block="Any1"
   Any1 = -1,
-    //% block="Any2"
+  //% block="Any2"
   Any2 = -1,
 }
 
